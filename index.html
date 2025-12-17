@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pizza Take - הפיצה של כפר כמא</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -113,9 +116,11 @@
             return (
                 <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isOpen ? 'bg-primary shadow-lg py-2' : 'bg-transparent py-4'}`}>
                     <div className="container mx-auto px-4 flex justify-between items-center">
-                        <div className="flex items-center gap-3 z-50">
-                            <div className="h-10 w-10 bg-secondary rounded-full flex items-center justify-center text-primary font-black border-2 border-white shadow-md">PT</div>
-                            <span className={`font-bold text-xl ${scrolled || isOpen ? 'text-white' : 'text-white drop-shadow-md'}`}>Pizza Take</span>
+                        {/* Brand Logo Area replaced with LOGO.png */}
+                        <div className="flex items-center z-50">
+                            <a href="#hero" className="flex items-center gap-2">
+                                <img src="LOGO.png" alt="Pizza Take Logo" className="h-12 md:h-14 w-auto object-contain drop-shadow-md" />
+                            </a>
                         </div>
 
                         <nav className="hidden md:flex gap-6">
@@ -230,12 +235,12 @@
                             {/* Pizza Card */}
                             <motion.div whileHover={{ y: -5 }} className="bg-white rounded-4xl overflow-hidden shadow-card group border border-gray-100">
                                 <div className="h-72 overflow-hidden relative bg-gray-200">
-                                    <img src="image2.jpg" alt="פיצה" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                    <img src="image2.png" alt="פיצה" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                     <div className="absolute top-4 right-4 bg-secondary text-primary font-bold px-4 py-2 rounded-xl shadow-md">מומלץ 🍕</div>
                                 </div>
                                 <div className="p-8">
                                     <h3 className="text-3xl font-bold text-primary mb-2">פיצות ומאפים</h3>
-                                    <p className="text-gray-500 mb-6 font-medium">בצק טרי בעבודת יד</p>
+                                    <p className="text-gray-500 mb-6 font-medium">בצק טרי בעבודת יד, 100% מוצרלה אמיתית</p>
                                     <ul className="space-y-4">
                                         <li className="flex justify-between items-center border-b border-gray-100 pb-3">
                                             <span className="font-bold text-lg">פיצה משפחתית</span>
@@ -348,7 +353,7 @@
                         </div>
 
                         <div className="mt-10 h-40 rounded-3xl overflow-hidden bg-gray-200 shadow-inner group relative">
-                             <img src="image4.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="מפה" />
+                             <img src="image4.png" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="מפה" />
                              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
                         </div>
                     </div>
@@ -429,5 +434,3 @@
     </script>
 </body>
 </html>
-
-
